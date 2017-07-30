@@ -1,3 +1,9 @@
+bunsen-images-extra (9.2-1) helium; urgency=medium
+
+  * Version bump to match existing debian package.
+
+ -- John Crawley <john@bunsenlabs.org>  Sun, 30 Jul 2017 12:18:05 +0900
+
 bunsen-images-extra (9.0-1) helium; urgency=high
 
   * Split source from bunsen-images.
