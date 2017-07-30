@@ -1,14 +1,5 @@
-# bunsen-images and bunsen-images-extra
-Artwork for logos, icons, avatars, splashes, backgrounds
-
-bunsen-images
--------------
-Desktop backgrounds will be installed in
-/usr/share/images/bunsen/wallpapers/default
-
-Grub and lightdm backgrounds will be installed as:
-/usr/share/images/bunsen/grub/default.png
-/usr/share/images/bunsen/login/default.png
+# bunsen-images-extra
+Artwork for logos, icons, avatars, splashes, backgrounds - extra
 
 bunsen-images-extra
 -------------------
@@ -24,7 +15,7 @@ and for bl-login-background in /usr/share/images/bunsen/login/bl-login-backgroun
 Notes about Wallpaper
 ---------------------
 
-These images were made for BunsenLabs by damo, using GIMP-2.9
+These images were made for BunsenLabs by damo, using GIMP-2.9, and others.
 
 If you are using nitrogen to set the desktop background, then "zoomed-fill"
 is usually the best setting if your screen resolution is different from
