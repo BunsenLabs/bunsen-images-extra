@@ -4,9 +4,9 @@ Priority: extra
 Maintainer: John Crawley <john@bunsenlabs.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
-Homepage: https://github.com/BunsenLabs/bunsen-images
-Vcs-Git: https://github.com/BunsenLabs/bunsen-images.git
-Vcs-Browser: https://github.com/BunsenLabs/bunsen-images
+Homepage: https://github.com/BunsenLabs/bunsen-images-extra
+Vcs-Git: https://github.com/BunsenLabs/bunsen-images-extra.git
+Vcs-Browser: https://github.com/BunsenLabs/bunsen-images-extra
 
 Package: bunsen-images-extra
 Architecture: all

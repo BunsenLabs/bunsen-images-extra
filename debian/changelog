@@ -1,3 +1,9 @@
+bunsen-images-extra (9.2.1-1) helium; urgency=medium
+
+  * Extra version bump to cover minor file changes.
+
+ -- John Crawley <john@bunsenlabs.org>  Sun, 30 Jul 2017 12:40:29 +0900
+
 bunsen-images-extra (9.2-1) helium; urgency=medium
 
   * Version bump to match existing debian package.
