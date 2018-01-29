@@ -1,3 +1,9 @@
+bunsen-images-extra (9.3-1) helium; urgency=medium
+
+  * Add hydrogen default images in archives directory.
+
+ -- John Crawley <john@bunsenlabs.org>  Mon, 29 Jan 2018 14:12:40 +0900
+
 bunsen-images-extra (9.2.1-1) helium; urgency=medium
 
   * Extra version bump to cover minor file changes.
