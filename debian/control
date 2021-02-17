@@ -11,6 +11,8 @@ Vcs-Browser: https://github.com/BunsenLabs/bunsen-images-extra
 Package: bunsen-images-archives
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: bunsen-images-extra (<=9.3.1-1)
+Replaces: bunsen-images-extra (<=9.3.1-1)
 Description: Images from former BunsenLabs releases
  A collection of wallpapers, grub and login backgrounds,
  used in former releases of BunsenLabs.
