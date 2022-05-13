@@ -1,0 +1,41 @@
+#!/bin/sh
+# postinst script for bunsen-images-archives
+
+# Summary of ways this script is called:
+#    postinst configure most-recently-configured-version(null if not upgrade)
+#    old-postinst abort-upgrade new-version
+#    conflictor's-postinst abort-remove in-favour package new-version
+#    deconfigured's-postinst abort-deconfigure in-favour failed-install-package version removing conflicting-package version
+
+# desktop-grub default now set (with priority 50) by bunsen-images-base,
+# but alternative grub backgrounds added here (priority 40)
+
+set -e
+
+BL_GRUB_BACKGROUNDS='/boot/grub/images/bunsen/Hydrogen.png
+/boot/grub/images/bunsen/Helium.png
+'
+
+GRUB_ALT_LINK='/usr/share/images/desktop-base/desktop-grub.png'
+
+case $1 in
+configure|abort-upgrade|abort-deconfigure|abort-remove)
+    while read -r image; do
+        if [ -f "$image" ]
+        then
+            mkdir -p /usr/share/images/desktop-base
+            update-alternatives --install "$GRUB_ALT_LINK" desktop-grub "$image" 40
+        fi
+    done << EOF
+$BL_GRUB_BACKGROUNDS
+EOF
+    if command -v update-grub > /dev/null ; then
+        sync
+        update-grub || true
+    fi
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

@@ -1,1 +1,3 @@
-archives usr/share/images/bunsen
+archives/*/grub/* boot/grub/images/bunsen
+archives/*/login usr/share/images/bunsen
+archives/*/wallpapers usr/share/images/bunsen

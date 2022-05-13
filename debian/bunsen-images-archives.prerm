@@ -1,0 +1,39 @@
+#!/bin/sh
+# prerm script for bunsen-images-archives
+
+# Summary of ways this script is called:
+#    prerm remove
+#    old-prerm upgrade new-version
+#    new-prerm failed-upgrade old-version
+#    conflictor's-prerm remove in-favour package new-version
+#    deconfigured's-prerm deconfigure in-favour package-being-installed version removing conflicting-package version
+
+# default desktop-grub is now set by bunsen-images-base
+# but alternative grub backgrounds are added by bunsen-images
+
+set -e
+
+BL_GRUB_BACKGROUNDS='/boot/grub/images/bunsen/Hydrogen.png
+/boot/grub/images/bunsen/Helium.png
+'
+
+case $1 in
+remove|deconfigure)
+    if update-alternatives --list desktop-grub >/dev/null 2>&1
+    then
+        while read -r image; do
+            update-alternatives --remove desktop-grub "$image"
+        done << EOF
+$BL_GRUB_BACKGROUNDS
+EOF
+        if command -v update-grub > /dev/null ; then
+            sync
+            update-grub || true
+        fi
+    fi
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

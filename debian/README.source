@@ -1,0 +1,24 @@
+Notes for packagers of bunsen-images-archives
+=============================================
+
+Default images from the release previous to the current one are shipped in bunsen-images.
+
+To add another older release's files to bunsen-images-archives:
+1) Make a new directory <releasename> in archives/
+2) In bunsen-images git repo, from the git branch of that release copy the contents 
+of bl-img-base (grub/, login/, wallpapers/) into the new directory <releasename>.
+3) Rename files <releasename>/grub/default.png and <releasename>/login/default.png 
+to <Releasename>.png. 
+NB: be sure to use an uppercase first letter to avoid possible name clashes with files 
+shipped by bunsen-images. (If this was not done it would be necessary to co-ordinate
+b-i and b-i-a package upgrades with Breaks: and Replaces: declarations.)
+4) If there is a symlink named "default", delete it.
+If the parent directory is now empty, delete that too.
+5) Rename archives/<releasename>/wallpapers/default/ to  
+archives/<releasename>/wallpapers/<releasename>/ 
+(there is no need to rename the wallpaper files themselves).
+6) Edit the maintainer scripts in debian/ bunsen-images-archives.{preinst,postinst,prerm,postrm}
+to include the newly added grub background images. (See existing entries.)
+7) Update any other files in debian/ as necessary (copyright, control etc).
+
+ -- John Crawley <john@bunsenlabs.org>  Fri, 13 May 2022 13:36:15 +0900
