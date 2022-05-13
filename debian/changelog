@@ -1,3 +1,10 @@
+bunsen-images-extra (11.1-1) beryllium; urgency=medium
+
+  * Rename images and directories so they can cohabit with bunsen-images.
+  * Add grub images to desktop-grub alternative.
+
+ -- John Crawley <john@bunsenlabs.org>  Fri, 13 May 2022 14:51:48 +0900
+
 bunsen-images-extra (11.0-1) beryllium; urgency=medium
 
   * Migrate for Debian Bullseye.
