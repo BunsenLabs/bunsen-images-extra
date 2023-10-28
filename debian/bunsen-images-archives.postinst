@@ -14,6 +14,7 @@ set -e
 
 BL_GRUB_BACKGROUNDS='/boot/grub/images/bunsen/Hydrogen.png
 /boot/grub/images/bunsen/Helium.png
+/boot/grub/images/bunsen/lithium.png
 '
 
 GRUB_ALT_LINK='/usr/share/images/desktop-base/desktop-grub.png'
