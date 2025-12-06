@@ -6,12 +6,14 @@ Desktop backgrounds will be installed in
 
 Login backgrounds will be installed in
 /usr/share/images/bunsen/login/
+(Recent BunsenLabs releases do not provide a dedicated login image,
+ but use a symlink to one of the wallpaper images.)
 
 Grub backgrounds will be installed in
 /boot/grub/images/bunsen/grub/
 
-Debian alternatives for desktop-grub will be set up
-in the standard location /usr/share/images/desktop-base/desktop-grub.png.
+Debian alternatives for desktop-grub will be set up in the standard location:
+/usr/share/images/desktop-base/desktop-grub.png.
 
 Default images from the last release will be shipped by bunsen-images.
 
